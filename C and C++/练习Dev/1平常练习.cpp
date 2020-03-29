@@ -1,15 +1,28 @@
 #include<stdio.h>
-int main ()
+int main()
 {
-	char sex,sports,diet,temp=' '; 
-	float faHeight,moHeight;
-	float Height;
-	scanf("%f%f%c%c%c%c%c%c",&faHeight,&moHeight,&temp,&sex,&temp,&sports,&temp,&diet);
-	if(sex=='F') Height=(faHeight+moHeight)*0.54;
-	else Height=(faHeight*0.923+moHeight)/2;
-
-	if(sports=='Y') Height = Height+0.02*Height;
-	if(diet=='Y') Height = Height+0.015*Height;
-	printf("%.2f",Height);
+	double a,c,d;
+	char b;
+	printf("%lf%c%lf",&a,&b,&c);
+	if(c==0) printf("除数不能为零");
+	switch(b)
+	 {
+		case 43:
+			d=a+c;
+			break;
+		case 45:
+			d=a-c;
+			break;
+		case 47:
+			d=a/c;
+			break;
+		case 42:
+			d=a*c;
+			break;
+		default: 
+			printf("运算符号有误");
+			break;
+	 }
+	printf("%lf",d);
 	return 0;
 }

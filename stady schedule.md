@@ -1,18 +1,16 @@
 ## Doing
 
-wake up at 7 am.
+wake up at 7 : 30 am.
 
-go running and eat after 8 am. 
+keep running and eat after 8 am. 
 
 study with class or learn something club
 
- 
+ Learning python and JavaScript
 
   
 
 ##  Will do
-
-Learn JavaScript and Java
 
 make a web for father`s business
 
