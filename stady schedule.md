@@ -1,6 +1,6 @@
 ## Doing
 
-wake up at 7 : 30 am.
+wake up at 7 : 00 am.
 
 keep running and eat after 8 am. 
 
