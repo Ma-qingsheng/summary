@@ -8,13 +8,15 @@ study with class or learn something club
 
  Learning python and JavaScript
 
+WeChat  App
+
   
 
 ##  Will do
 
 make a web for father`s business
 
- 
+ WeChat App for menu
 
 
 
