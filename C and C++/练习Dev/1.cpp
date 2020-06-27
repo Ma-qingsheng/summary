@@ -1,17 +1,54 @@
-#include<stdio.h>
+#include <stdio.h>
 int main()
 {
-	int a=95859,b,c,d=9,st=0;
-	while(st==0)
-	{
-		a++;
-		b=(a%100-a%10)*100;
-		c=a%10000-a%1000;
-		if(b==c&&a%10==9)
-		{
-			st=1;
-		}
-	}
-	printf("%d",a);
-	return 0;
+    char S[100],T[20];
+    char ch1,ch2;
+    printf("Ö÷×Ö·û´®:\n");
+    ch1=getchar();
+    int i=0;
+    while(ch1!='\n')
+    {
+        S[i]=ch1;
+        i++;
+        ch1=getchar();
+    }
+    printf("ÒªÉ¸Ñ¡µÄ×Ö·û´®:\n");
+    ch2=getchar();
+    int j=0;
+    while(ch2!='\n')
+    {
+        T[j]=ch2;
+        j++;
+        ch2=getchar();
+    }
+  
+    int m,n;
+    m=0;
+    n=0;
+    int num=0;
+    while(m<=i&&n<=j)
+    {
+        if(S[m]==T[n])
+        {
+            m++;
+            n++;
+        }
+        else
+        {
+            m=m-n+1;
+            n=0;
+        }
+        if(n==j)
+        {
+            num++;
+            printf("p=%d\n",m-n+1);
+        }
+    }
+    if(m==i+1)
+        {
+            printf("%d",num);
+        }
+    return 0;
 }
+
+
