@@ -27,7 +27,7 @@ public class Attendance {
 
         while(true) {
             System.out.println("-------------------------------------------------------");
-            System.out.println("ÇëÑ¡Ôñ¹¦ÄÜ      1.(×¢²á)    2.(µÇÂ½)");
+            System.out.println("è¯·é€‰æ‹©åŠŸèƒ½      1.(æ³¨å†Œ)    2.(ç™»é™†)");
             System.out.println("-------------------------------------------------------");
 
             int option = 0;
@@ -37,7 +37,7 @@ public class Attendance {
                     option = scan.nextInt();
                     b = false;
                 } catch (Exception e) {
-                    System.out.println("ÊäÈë´íÎó£¬ÇëÖØĞÂÊäÈë!");
+                    System.out.println("è¾“å…¥é”™è¯¯ï¼Œè¯·é‡æ–°è¾“å…¥!");
                     scan.nextLine();
                 }
             }
@@ -58,7 +58,7 @@ public class Attendance {
                     }
                     break;
                 default:
-                    System.out.println("ÄãµÄÑ¡ÔñÓĞÎó,ÇëÖØĞÂÊäÈë");
+                    System.out.println("ä½ çš„é€‰æ‹©æœ‰è¯¯,è¯·é‡æ–°è¾“å…¥");
             }
         }
 
@@ -66,10 +66,10 @@ public class Attendance {
     public void menu(){
 
         System.out.println("-------------------------------------------------------");
-        System.out.println("                 1¡ª¡ªÉÏ°àÇ©µ½");
-        System.out.println("                 2¡ª¡ªÏÂ°àÇ©³ö");
-        System.out.println("                 3¡ª¡ª¿¼ÇÚĞÅÏ¢²éÔÄ");
-        System.out.println("                 4¡ª¡ªÍË³ö");
+        System.out.println("                 1â€”â€”ä¸Šç­ç­¾åˆ°");
+        System.out.println("                 2â€”â€”ä¸‹ç­ç­¾å‡º");
+        System.out.println("                 3â€”â€”è€ƒå‹¤ä¿¡æ¯æŸ¥é˜…");
+        System.out.println("                 4â€”â€”é€€å‡º");
         System.out.println("-------------------------------------------------------");
         int choice = 0;
         boolean b = true;
@@ -78,7 +78,7 @@ public class Attendance {
                 choice = scan.nextInt();
                 b = false;
             } catch (Exception e) {
-                System.out.println("ÊäÈë´íÎó£¬ÇëÖØĞÂÊäÈë!");
+                System.out.println("è¾“å…¥é”™è¯¯ï¼Œè¯·é‡æ–°è¾“å…¥!");
                 scan.nextLine();
             }
         }
@@ -93,60 +93,60 @@ public class Attendance {
                 display_record();
                 break;
             case 4:
-                System.out.println(username+"ÓÃ»§ÒÑÍË³ö£¡");
+                System.out.println(username+"ç”¨æˆ·å·²é€€å‡ºï¼");
                 circulation = false;
                 break;
             default:
-                System.out.println("ÊäÈë´íÎó£¡");
+                System.out.println("è¾“å…¥é”™è¯¯ï¼");
         }
     }
     public void login(){
         boolean input = true;
         while (input){
-            System.out.print("ÇëÊäÈëÓÃ»§Ãû£º");
+            System.out.print("è¯·è¾“å…¥ç”¨æˆ·åï¼š");
             username = scan.next();
-            System.out.print("ÇëÊäÈëÃÜÂë£º");
+            System.out.print("è¯·è¾“å…¥å¯†ç ï¼š");
             password = scan.next();
             if (map.containsKey(username)){
                 if (map.get(username).equals(password)){
                     input = false;
-                    System.out.println(username+"ÓÃ»§£¬µÇÂ¼³É¹¦£¡");
+                    System.out.println(username+"ç”¨æˆ·ï¼Œç™»å½•æˆåŠŸï¼");
                 }else {
-                    System.out.println("ÃÜÂë´íÎó£¡");
+                    System.out.println("å¯†ç é”™è¯¯ï¼");
                 }
             }else {
-                System.out.println("ÃÜÂë»òÓÃ»§Ãû´íÎó£¬ÇëÖØĞÂÊäÈë£¡");
+                System.out.println("å¯†ç æˆ–ç”¨æˆ·åé”™è¯¯ï¼Œè¯·é‡æ–°è¾“å…¥ï¼");
             }
         }
     }
     public void reg(){
 
         while(true){
-            System.out.println("ÇëÊäÈëÓÃ»§Ãû:");
+            System.out.println("è¯·è¾“å…¥ç”¨æˆ·å:");
             username = scan.next();
             if(map.get(username)!=null){
-                //Èç¹û´æÔÚ
-                System.out.println("¸ÃÕËºÅÒÑ¾­´æÔÚ£¬ÇëÖØĞÂÊäÈëÕËºÅ");
+                //å¦‚æœå­˜åœ¨
+                System.out.println("è¯¥è´¦å·å·²ç»å­˜åœ¨ï¼Œè¯·é‡æ–°è¾“å…¥è´¦å·");
             }else{
-                //²»´æÔÚ
+                //ä¸å­˜åœ¨
                 break;
             }
         }
 
-        System.out.println("ÇëÊäÈëÃÜÂë£º");
+        System.out.println("è¯·è¾“å…¥å¯†ç ï¼š");
         password = scan.next();
-        //Ìí¼ÓÓÃ»§µ½map¼¯ºÏ
+        //æ·»åŠ ç”¨æˆ·åˆ°mapé›†åˆ
         map.put(username,password);
-        System.out.println("×¢²á³É¹¦!");
-        System.out.println("µ±Ç°×¢²áµÄÈËÔ±£º"+username);
+        System.out.println("æ³¨å†ŒæˆåŠŸ!");
+        System.out.println("å½“å‰æ³¨å†Œçš„äººå‘˜ï¼š"+username);
     }
-    //ÉÏ°àÇ©µ½
+    //ä¸Šç­ç­¾åˆ°
     public void check_in(){
         if (Integer.valueOf(time)>9){
-            System.out.println(username+"ÓÃ»§³Ùµ½£¬ÒÑ¾­¼ÇÂ¼£¡");
-            //Ğ´Èëµ½attendance+username.txtÎÄ¼ş
+            System.out.println(username+"ç”¨æˆ·è¿Ÿåˆ°ï¼Œå·²ç»è®°å½•ï¼");
+            //å†™å…¥åˆ°attendance+username.txtæ–‡ä»¶
             String saveFile = "attendance"+username+".txt";
-            String fileContent = format+" "+username+"³Ùµ½";
+            String fileContent = format+" "+username+"è¿Ÿåˆ°";
             File file = new File(saveFile);
             FileOutputStream fos = null;
             OutputStreamWriter osw = null;
@@ -178,19 +178,19 @@ public class Attendance {
                 }
             }
         }else {
-            System.out.println("Ç©µ½³É¹¦£¡");
+            System.out.println("ç­¾åˆ°æˆåŠŸï¼");
 
         }
         System.out.println(format);
 
     }
-    //ÏÂ°àÇ©³ö
+    //ä¸‹ç­ç­¾å‡º
     public void check_out(){
         if (Integer.valueOf(time)<18){
-            System.out.println(username+"ÓÃ»§ÔçÍË£¬ÒÑ¾­¼ÇÂ¼!");
-            //Ğ´Èëµ½attendance+username.txtÎÄ¼ş
+            System.out.println(username+"ç”¨æˆ·æ—©é€€ï¼Œå·²ç»è®°å½•!");
+            //å†™å…¥åˆ°attendance+username.txtæ–‡ä»¶
             String saveFile = "attendance"+username+".txt";
-            String fileContent = format+" "+username+"ÔçÍË";
+            String fileContent = format+" "+username+"æ—©é€€";
             File file = new File(saveFile);
             FileOutputStream fos = null;
             OutputStreamWriter osw = null;
@@ -222,12 +222,12 @@ public class Attendance {
                 }
             }
         }else {
-            System.out.println("Ç©³ö³É¹¦£¡");
+            System.out.println("ç­¾å‡ºæˆåŠŸï¼");
 
         }
         System.out.println(format);
     }
-    //²éÑ¯¿¼ÇÚĞÅÏ¢
+    //æŸ¥è¯¢è€ƒå‹¤ä¿¡æ¯
     public void display_record(){
 
         String filePath = "attendance"+username+".txt";
@@ -235,19 +235,19 @@ public class Attendance {
         try {
             String encoding="utf-8";
             File file=new File(filePath);
-            if(file.isFile() && file.exists()){ //ÅĞ¶ÏÎÄ¼şÊÇ·ñ´æÔÚ
+            if(file.isFile() && file.exists()){ //åˆ¤æ–­æ–‡ä»¶æ˜¯å¦å­˜åœ¨
                 read = new InputStreamReader(
-                        new FileInputStream(file),encoding);//¿¼ÂÇµ½±àÂë¸ñÊ½
+                        new FileInputStream(file),encoding);//è€ƒè™‘åˆ°ç¼–ç æ ¼å¼
                 BufferedReader bufferedReader = new BufferedReader(read);
                 String lineTxt = null;
                 while((lineTxt = bufferedReader.readLine()) != null){
                     System.out.println(lineTxt);
                 }
             }else{
-                System.out.println("ÕÒ²»µ½Ö¸¶¨µÄÎÄ¼ş");
+                System.out.println("æ‰¾ä¸åˆ°æŒ‡å®šçš„æ–‡ä»¶");
             }
         } catch (Exception e) {
-            System.out.println("¶ÁÈ¡ÎÄ¼şÄÚÈİ³ö´í");
+            System.out.println("è¯»å–æ–‡ä»¶å†…å®¹å‡ºé”™");
             e.printStackTrace();
         }finally {
             try {

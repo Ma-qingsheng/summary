@@ -1,0 +1,170 @@
+BL51 BANKED LINKER/LOCATER V6.22                                                        07/26/2020  17:46:43  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22, INVOKED BY:
+E:\51KEIL C519.54\C51\BIN\BL51.EXE .\Objects\main.obj TO .\Objects\Template PRINT (.\Listings\Template.m51)
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  .\Objects\main.obj (MAIN)
+  E:\51KEIL C519.54\C51\LIB\C51S.LIB (?C_STARTUP)
+
+
+LINK MAP OF MODULE:  .\Objects\Template (MAIN)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            IDATA   0008H     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+            CODE    0003H     0038H     UNIT         ?PR?MAIN?MAIN
+            CODE    003BH     001EH     UNIT         ?PR?LEFT_RUN?MAIN
+            CODE    0059H     001EH     UNIT         ?PR?RIGHT_RUN?MAIN
+            CODE    0077H     001AH     UNIT         ?PR?FRONT_RUN?MAIN
+            CODE    0091H     000FH     UNIT         ?PR?_DELAY?MAIN
+            CODE    00A0H     000CH     UNIT         ?C_C51STARTUP
+            CODE    00ACH     0009H     UNIT         ?PR?BACK_RUN?MAIN
+            CODE    00B5H     0009H     UNIT         ?PR?STOP?MAIN
+
+
+
+OVERLAY MAP OF MODULE:   .\Objects\Template (MAIN)
+
+
+SEGMENT
+  +--> CALLED SEGMENT
+---------------------
+?C_C51STARTUP
+  +--> ?PR?MAIN?MAIN
+
+?PR?MAIN?MAIN
+  +--> ?PR?STOP?MAIN
+  +--> ?PR?FRONT_RUN?MAIN
+  +--> ?PR?RIGHT_RUN?MAIN
+  +--> ?PR?_DELAY?MAIN
+  +--> ?PR?LEFT_RUN?MAIN
+
+?PR?FRONT_RUN?MAIN
+  +--> ?PR?_DELAY?MAIN
+
+?PR?RIGHT_RUN?MAIN
+  +--> ?PR?_DELAY?MAIN
+
+?PR?LEFT_RUN?MAIN
+BL51 BANKED LINKER/LOCATER V6.22                                                      07/26/2020  17:46:43  PAGE 2
+
+
+  +--> ?PR?_DELAY?MAIN
+
+
+
+SYMBOL TABLE OF MODULE:  .\Objects\Template (MAIN)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        MAIN
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  C:0095H         PUBLIC        _delay
+  B:0090H.1       PUBLIC        P1_1
+  B:0090H.2       PUBLIC        P1_2
+  B:0090H.3       PUBLIC        P1_3
+  B:0090H.4       PUBLIC        P1_4
+  B:00B0H.6       PUBLIC        P3_6
+  B:00B0H.7       PUBLIC        P3_7
+  C:0003H         PUBLIC        main
+  C:00B5H         PUBLIC        stop
+  C:00ACH         PUBLIC        back_run
+  C:0059H         PUBLIC        right_run
+  C:0077H         PUBLIC        front_run
+  C:003BH         PUBLIC        left_run
+  C:0091H         SYMBOL        L?0019
+  -------         PROC          L?0018
+  -------         ENDPROC       L?0018
+  C:0091H         SYMBOL        L?0019
+  -------         PROC          _DELAY
+  D:0006H         SYMBOL        i
+  C:0095H         LINE#         17
+  C:0095H         LINE#         18
+  C:009FH         LINE#         19
+  -------         ENDPROC       _DELAY
+  -------         PROC          FRONT_RUN
+  C:0077H         LINE#         21
+  C:0077H         LINE#         22
+  C:007BH         LINE#         23
+  C:007FH         LINE#         24
+  C:0082H         LINE#         25
+  C:0086H         LINE#         26
+  C:008AH         LINE#         27
+  -------         ENDPROC       FRONT_RUN
+  -------         PROC          BACK_RUN
+  C:00ACH         LINE#         30
+  C:00ACH         LINE#         32
+  C:00B0H         LINE#         33
+  C:00B4H         LINE#         34
+  -------         ENDPROC       BACK_RUN
+  -------         PROC          LEFT_RUN
+  C:003BH         LINE#         36
+  C:003BH         LINE#         37
+  C:003FH         LINE#         38
+  C:0043H         LINE#         39
+  C:004AH         LINE#         40
+  C:004EH         LINE#         41
+  C:0052H         LINE#         42
+BL51 BANKED LINKER/LOCATER V6.22                                                      07/26/2020  17:46:43  PAGE 3
+
+
+  -------         ENDPROC       LEFT_RUN
+  -------         PROC          RIGHT_RUN
+  C:0059H         LINE#         45
+  C:0059H         LINE#         46
+  C:005DH         LINE#         47
+  C:0061H         LINE#         48
+  C:0068H         LINE#         49
+  C:006CH         LINE#         50
+  C:0070H         LINE#         51
+  -------         ENDPROC       RIGHT_RUN
+  -------         PROC          STOP
+  C:00B5H         LINE#         54
+  C:00B5H         LINE#         55
+  C:00B9H         LINE#         56
+  C:00BDH         LINE#         57
+  -------         ENDPROC       STOP
+  -------         PROC          MAIN
+  C:0003H         LINE#         61
+  C:0003H         LINE#         63
+  C:0006H         LINE#         64
+  C:0006H         LINE#         65
+  C:000CH         LINE#         66
+  C:000FH         LINE#         67
+  C:0011H         LINE#         68
+  C:0011H         LINE#         69
+  C:0017H         LINE#         70
+  C:001AH         LINE#         71
+  C:001DH         LINE#         72
+  C:001DH         LINE#         73
+  C:0023H         LINE#         74
+  C:0026H         LINE#         75
+  C:0029H         LINE#         76
+  C:0029H         LINE#         77
+  C:002FH         LINE#         78
+  C:0032H         LINE#         79
+  C:0039H         LINE#         80
+  C:0039H         LINE#         81
+  C:0039H         LINE#         82
+  -------         ENDPROC       MAIN
+  -------         ENDMOD        MAIN
+
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?BACK_RUN?MAIN
+
+Program Size: data=9.0 xdata=0 code=190
+LINK/LOCATE RUN COMPLETE.  1 WARNING(S),  0 ERROR(S)
